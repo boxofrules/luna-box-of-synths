@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Box Of Synths</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img class="mark" src="brand/icon-green.svg" alt="">
+    <div class="titles">
+      <span class="product">Box Of Synths</span>
+      <span id="status" class="status" role="status">Connecting to LUNA</span>
+    </div>
+  </header>
+
+  <section class="track" aria-label="Track">
+    <div class="track-head">
+      <span id="track-colour" class="swatch" aria-hidden="true"></span>
+      <div class="context">
+        <strong id="track-name" class="track-title">No track selected</strong>
+        <span id="track-scope" class="scope">Follows the track you select in LUNA</span>
+      </div>
+      <button id="pin" class="pin" aria-pressed="false" title="Keep this panel on this track while you select others">Pin</button>
+    </div>
+    <button id="track-menu" type="button" class="key full" aria-label="Box Of Synths tracks in this session" hidden></button>
+    <p id="track-message" class="message" hidden></p>
+    <div class="actions">
+      <button id="put" class="primary" hidden>Put Box Of Synths on this track</button>
+      <button id="new-track" hidden>New Box Of Synths track</button>
+      <button id="editor" hidden aria-pressed="false">Show the synth</button>
+    </div>
+    <label id="output-row" class="output" hidden>
+      <span>Output</span>
+      <input id="output" type="range" min="0" max="1000" step="1" aria-describedby="output-value">
+      <span id="output-value" class="value"></span>
+    </label>
+  </section>
+
+  <section class="synth" id="synth" aria-label="The synth" hidden>
+    <p id="synth-message" class="message" hidden></p>
+    <div id="synth-groups"></div>
+  </section>
+
+  <section class="chat" id="chat" aria-label="Chat with Box Of Synths" hidden>
+    <div class="chat-head">
+      <span class="kicker">Chat</span>
+      <span id="chat-meta" class="muted"></span>
+    </div>
+    <ol id="chat-lines" class="chat-lines" aria-live="polite"></ol>
+    <p id="chat-message" class="message" hidden></p>
+    <div class="composer">
+      <textarea id="chat-field" rows="2" placeholder="Tell me what to make" aria-label="Tell Box Of Synths what to make"></textarea>
+      <div class="composer-keys">
+        <div class="mode" role="group" aria-label="Generate or edit">
+          <button type="button" data-mode="generate" aria-pressed="true">Generate</button>
+          <button type="button" data-mode="edit" aria-pressed="false">Edit</button>
+        </div>
+        <button type="button" id="chat-send" class="send" aria-label="Send">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <details class="box sounds" id="sounds-box" data-key="sounds">
+    <summary><span class="kicker">Sounds</span><span id="count" class="muted"></span></summary>
+    <div class="box-body">
+      <input id="search" type="search" placeholder="Search sounds" autocomplete="off" aria-label="Search sounds">
+      <button id="category" type="button" class="key full" aria-label="Category">All categories</button>
+      <p id="sounds-message" class="message" hidden></p>
+      <ul id="list" class="list" role="listbox" aria-label="Sounds"></ul>
+      <p class="foot">Click a sound to load it onto this track. With no Box Of Synths track here, it makes a new one.</p>
+    </div>
+  </details>
+
+  <script src="vendor/luna.global.js"></script>
+  <script src="layout.js"></script>
+  <script src="dial.js"></script>
+  <script src="widgets.js"></script>
+  <script src="logic.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

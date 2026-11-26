@@ -1,0 +1,13 @@
+{
+    "package_name": "Box Of Synths",
+    "id": "com.boxofrules.luna_box_of_synths",
+    "title": "Box Of Synths",
+    "version": "0.5.0",
+    "manufacturer": "Box Of Rules",
+    "description": "Box Of Synths beside the timeline: put it on a track, play with its macros and every section of the synth, chat to design sounds, and load your saved sounds.",
+    "sdk_version": "3.1.1.44",
+    "min_luna_version": "3.1.1",
+    "engines": ["luna"],
+    "html": "index.html",
+    "target": "browser"
+}

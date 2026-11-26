@@ -1,0 +1,25 @@
+{
+  "name": "luna-box-of-synths",
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "description": "Box Of Synths for LUNA, a LUNA add-on built with @uaudio/luna-builder-sdk",
+  "scripts": {
+    "test": "vitest run",
+    "serve": "ua-builder serve",
+    "install-addon": "ua-builder install",
+    "pack": "ua-builder pack",
+    "vendor": "node scripts/vendor.mjs",
+    "postinstall": "npm run vendor"
+  },
+  "devDependencies": {
+    "@uaudio/luna-builder-sdk": "file:../../../Library/Application Support/LUNA Builder SDK",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boxofrules/luna-box-of-synths"
+  }
+}
