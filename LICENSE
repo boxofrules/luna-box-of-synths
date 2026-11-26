@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-The MIT licence covers this add-on's code only. It does not cover:
-- the Box Of Synths and Box Of Rules names, marks and icon (brand/icon-green.svg),
-  all rights reserved;
-- the fonts in brand/fonts, each under the SIL Open Font Licence (OFL-*.txt there);
-- Universal Audio's LUNA Builder SDK, Apache License 2.0, which is not in this
-  repository (see THIRD-PARTY-NOTICES.md).
